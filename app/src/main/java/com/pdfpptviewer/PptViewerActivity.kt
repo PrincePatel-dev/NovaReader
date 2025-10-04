@@ -1,29 +1,35 @@
 package com.pdfpptviewer
 
 import android.os.Bundle
-import android.widget.Button
+import android.text.SpannableStringBuilder
+import android.text.style.BulletSpan
+import android.text.style.RelativeSizeSpan
+import android.text.style.StyleSpan
+import android.view.View
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import com.google.android.material.button.MaterialButton
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.apache.poi.xslf.usermodel.XMLSlideShow
 import org.apache.poi.hslf.usermodel.HSLFSlideShow
-import java.io.InputStream
 import java.io.ByteArrayInputStream
 
 class PptViewerActivity : AppCompatActivity() {
     
     private lateinit var slideContentText: TextView
-    private lateinit var prevButton: Button
-    private lateinit var nextButton: Button
+    private lateinit var prevButton: MaterialButton
+    private lateinit var nextButton: MaterialButton
     private lateinit var slideInfoText: TextView
     private lateinit var rootLayout: ConstraintLayout
+    private lateinit var loadingIndicator: ProgressBar
     
     private var slides = mutableListOf<String>()
     private var currentSlideIndex = 0
@@ -37,11 +43,13 @@ class PptViewerActivity : AppCompatActivity() {
         nextButton = findViewById(R.id.nextButton)
         slideInfoText = findViewById(R.id.slideInfoText)
         rootLayout = findViewById(R.id.rootLayout)
+        loadingIndicator = findViewById(R.id.loadingIndicator)
         
         applyThemeColors()
         setupButtons()
         
         intent.data?.let { uri ->
+            loadingIndicator.visibility = View.VISIBLE
             CoroutineScope(Dispatchers.Main).launch {
                 try {
                     val mimeType = contentResolver.getType(uri)
@@ -49,8 +57,10 @@ class PptViewerActivity : AppCompatActivity() {
                         val fileBytes = inputStream.readBytes()
                         loadPresentation(fileBytes, mimeType)
                     }
+                    loadingIndicator.visibility = View.GONE
                 } catch (e: Exception) {
                     e.printStackTrace()
+                    loadingIndicator.visibility = View.GONE
                     Toast.makeText(
                         this@PptViewerActivity,
                         R.string.error_opening_file,
@@ -174,7 +184,10 @@ class PptViewerActivity : AppCompatActivity() {
     private fun showSlide(index: Int) {
         if (index >= 0 && index < slides.size) {
             currentSlideIndex = index
-            slideContentText.text = slides[index]
+            
+            // Format slide content with better spacing and styling
+            val formattedText = formatSlideContent(slides[index])
+            slideContentText.text = formattedText
             
             slideInfoText.text = getString(
                 R.string.slide_info,
@@ -185,5 +198,11 @@ class PptViewerActivity : AppCompatActivity() {
             prevButton.isEnabled = currentSlideIndex > 0
             nextButton.isEnabled = currentSlideIndex < slides.size - 1
         }
+    }
+    
+    private fun formatSlideContent(content: String): String {
+        // Add extra spacing between paragraphs for better readability
+        return content.replace("\n\n", "\n\n\n")
+            .trim()
     }
 }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PDF PPT Viewer</string>
+    <string name="app_name">NovaReader</string>
     <string name="select_file">Select File</string>
     <string name="dark_mode">Dark Mode</string>
     <string name="light_mode">Light Mode</string>
     <string name="no_file_selected">No file selected</string>
-    <string name="open_pdf">Open PDF</string>
-    <string name="open_ppt">Open PPT/PPTX</string>
+    <string name="open_pdf">📄 Open PDF Document</string>
+    <string name="open_ppt">📊 Open PowerPoint</string>
     <string name="previous_page">Previous</string>
     <string name="next_page">Next</string>
     <string name="page_info">Page %1$d of %2$d</string>
