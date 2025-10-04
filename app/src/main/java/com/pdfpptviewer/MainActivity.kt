@@ -59,10 +59,16 @@ class MainActivity : AppCompatActivity() {
     }
     
     private fun setupDarkModeSwitch() {
-        val currentNightMode = AppCompatDelegate.getDefaultNightMode()
-        darkModeSwitch.isChecked = currentNightMode == AppCompatDelegate.MODE_NIGHT_YES
+        val sharedPref = getSharedPreferences("settings", MODE_PRIVATE)
+        val isDarkMode = sharedPref.getBoolean("dark_mode", false)
+        
+        darkModeSwitch.isChecked = isDarkMode
         
         darkModeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            val editor = sharedPref.edit()
+            editor.putBoolean("dark_mode", isChecked)
+            editor.apply()
+            
             if (isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             } else {

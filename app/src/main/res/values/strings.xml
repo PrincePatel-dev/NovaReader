@@ -9,8 +9,14 @@
     <string name="open_ppt">Open PPT/PPTX</string>
     <string name="previous_page">Previous</string>
     <string name="next_page">Next</string>
+    <string name="previous_slide">Previous</string>
+    <string name="next_slide">Next</string>
     <string name="page_info">Page %1$d of %2$d</string>
     <string name="slide_info">Slide %1$d of %2$d</string>
     <string name="error_opening_file">Error opening file</string>
     <string name="permission_required">Storage permission is required to open files</string>
+    <string name="no_slides_found">No slides found in presentation</string>
+    <string name="unsupported_ppt_format">Unsupported file format. Please use .ppt or .pptx files.</string>
+    <string name="slide_images_only_placeholder">Slide %1$d&#10;&#10;[Preview unavailable – this slide contains graphics that require a full PowerPoint viewer]</string>
+    <string name="ppt_text_only_notice">We are showing a text-only preview of your slides. Open the file in PowerPoint for full formatting.</string>
 </resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="dark_background">#FF121212</color>
+    <color name="dark_surface">#FF1E1E1E</color>
+    <color name="dark_text">#FFFFFFFF</color>
+    <color name="light_background">#FFFFFFFF</color>
+    <color name="light_surface">#FFF5F5F5</color>
+    <color name="light_text">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">PDF PPT Viewer</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="error_opening_file">Error opening file</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="next_page">Next</string>
+    <string name="next_slide">Next</string>
+    <string name="no_file_selected">No file selected</string>
+    <string name="no_slides_found">No slides found in presentation</string>
+    <string name="open_pdf">Open PDF</string>
+    <string name="open_ppt">Open PPT/PPTX</string>
+    <string name="page_info">Page %1$d of %2$d</string>
+    <string name="permission_required">Storage permission is required to open files</string>
+    <string name="ppt_text_only_notice">We are showing a text-only preview of your slides. Open the file in PowerPoint for full formatting.</string>
+    <string name="previous_page">Previous</string>
+    <string name="previous_slide">Previous</string>
+    <string name="select_file">Select File</string>
+    <string name="slide_images_only_placeholder">Slide %1$d
+
+[Preview unavailable – this slide contains graphics that require a full PowerPoint viewer]</string>
+    <string name="slide_info">Slide %1$d of %2$d</string>
+    <string name="unsupported_ppt_format">Unsupported file format. Please use .ppt or .pptx files.</string>
+    <style name="Theme.PDFPPTViewer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+    <style name="Theme.PDFPPTViewer.Dark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnSurface">@color/dark_text</item>
+        <item name="android:windowBackground">@color/dark_background</item>
+        <item name="android:statusBarColor">@color/dark_background</item>
+        <item name="android:navigationBarColor">@color/dark_background</item>
+    </style>
+    <style name="Theme.PDFPPTViewer.Light" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSurface">@color/light_surface</item>
+        <item name="colorOnSurface">@color/light_text</item>
+        <item name="android:windowBackground">@color/light_background</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+</resources>

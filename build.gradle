@@ -11,10 +11,7 @@ buildscript {
 }
 
 allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
+    // repositories are now defined in settings.gradle
 }
 
 task clean(type: Delete) {
