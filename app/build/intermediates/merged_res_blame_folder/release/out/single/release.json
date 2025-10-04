@@ -1,22 +1,22 @@
 [
     {
-        "merged": "com.pdfpptviewer.app-merged_res-35:/mipmap-mdpi_ic_launcher.xml.flat",
-        "source": "com.pdfpptviewer.app-main-36:/mipmap-mdpi/ic_launcher.xml"
+        "merged": "com.pdfpptviewer.app-merged_res-37:/layout_activity_pdf_viewer.xml.flat",
+        "source": "com.pdfpptviewer.app-main-38:/layout/activity_pdf_viewer.xml"
     },
     {
-        "merged": "com.pdfpptviewer.app-merged_res-35:/layout_activity_pdf_viewer.xml.flat",
-        "source": "com.pdfpptviewer.app-main-36:/layout/activity_pdf_viewer.xml"
+        "merged": "com.pdfpptviewer.app-merged_res-37:/mipmap-mdpi_ic_launcher_round.xml.flat",
+        "source": "com.pdfpptviewer.app-main-38:/mipmap-mdpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.pdfpptviewer.app-merged_res-35:/mipmap-mdpi_ic_launcher_round.xml.flat",
-        "source": "com.pdfpptviewer.app-main-36:/mipmap-mdpi/ic_launcher_round.xml"
+        "merged": "com.pdfpptviewer.app-merged_res-37:/layout_activity_main.xml.flat",
+        "source": "com.pdfpptviewer.app-main-38:/layout/activity_main.xml"
     },
     {
-        "merged": "com.pdfpptviewer.app-merged_res-35:/layout_activity_ppt_viewer.xml.flat",
-        "source": "com.pdfpptviewer.app-main-36:/layout/activity_ppt_viewer.xml"
+        "merged": "com.pdfpptviewer.app-merged_res-37:/layout_activity_ppt_viewer.xml.flat",
+        "source": "com.pdfpptviewer.app-main-38:/layout/activity_ppt_viewer.xml"
     },
     {
-        "merged": "com.pdfpptviewer.app-merged_res-35:/layout_activity_main.xml.flat",
-        "source": "com.pdfpptviewer.app-main-36:/layout/activity_main.xml"
+        "merged": "com.pdfpptviewer.app-merged_res-37:/mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "com.pdfpptviewer.app-main-38:/mipmap-mdpi/ic_launcher.xml"
     }
 ]

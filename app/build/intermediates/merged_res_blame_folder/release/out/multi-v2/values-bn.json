@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.pdfpptviewer.app-mergeReleaseResources-33:/values-bn/values-bn.xml",
+            "outputFile": "com.pdfpptviewer.app-mergeReleaseResources-35:/values-bn/values-bn.xml",
             "map": [
                 {
                     "source": "/home/codespace/.gradle/caches/8.14.2/transforms/32f9f672ec92cd493232885ae440b30b/transformed/appcompat-1.6.1/res/values-bn/values-bn.xml",

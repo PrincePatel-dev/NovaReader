@@ -1,14 +1,14 @@
 [
     {
-        "merged": "com.pdfpptviewer.app-mergeReleaseResources-34:/layout/activity_main.xml",
-        "source": "com.pdfpptviewer.app-main-36:/layout/activity_main.xml"
+        "merged": "com.pdfpptviewer.app-mergeReleaseResources-36:/layout/activity_pdf_viewer.xml",
+        "source": "com.pdfpptviewer.app-main-38:/layout/activity_pdf_viewer.xml"
     },
     {
-        "merged": "com.pdfpptviewer.app-mergeReleaseResources-34:/layout/activity_ppt_viewer.xml",
-        "source": "com.pdfpptviewer.app-main-36:/layout/activity_ppt_viewer.xml"
+        "merged": "com.pdfpptviewer.app-mergeReleaseResources-36:/layout/activity_main.xml",
+        "source": "com.pdfpptviewer.app-main-38:/layout/activity_main.xml"
     },
     {
-        "merged": "com.pdfpptviewer.app-mergeReleaseResources-34:/layout/activity_pdf_viewer.xml",
-        "source": "com.pdfpptviewer.app-main-36:/layout/activity_pdf_viewer.xml"
+        "merged": "com.pdfpptviewer.app-mergeReleaseResources-36:/layout/activity_ppt_viewer.xml",
+        "source": "com.pdfpptviewer.app-main-38:/layout/activity_ppt_viewer.xml"
     }
 ]

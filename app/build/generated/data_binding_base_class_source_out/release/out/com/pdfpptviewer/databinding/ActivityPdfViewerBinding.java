@@ -4,16 +4,14 @@ package com.pdfpptviewer.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.button.MaterialButton;
+import com.github.barteksc.pdfviewer.PDFView;
+import com.google.android.material.card.MaterialCardView;
 import com.pdfpptviewer.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -24,33 +22,24 @@ public final class ActivityPdfViewerBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final LinearLayout controlsLayout;
-
-  @NonNull
-  public final Button nextButton;
+  public final MaterialCardView pageInfoContainer;
 
   @NonNull
   public final TextView pageInfoText;
 
   @NonNull
-  public final ImageView pdfImageView;
-
-  @NonNull
-  public final MaterialButton prevButton;
+  public final PDFView pdfView;
 
   @NonNull
   public final ConstraintLayout rootLayout;
 
   private ActivityPdfViewerBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LinearLayout controlsLayout, @NonNull Button nextButton,
-      @NonNull TextView pageInfoText, @NonNull ImageView pdfImageView,
-      @NonNull MaterialButton prevButton, @NonNull ConstraintLayout rootLayout) {
+      @NonNull MaterialCardView pageInfoContainer, @NonNull TextView pageInfoText,
+      @NonNull PDFView pdfView, @NonNull ConstraintLayout rootLayout) {
     this.rootView = rootView;
-    this.controlsLayout = controlsLayout;
-    this.nextButton = nextButton;
+    this.pageInfoContainer = pageInfoContainer;
     this.pageInfoText = pageInfoText;
-    this.pdfImageView = pdfImageView;
-    this.prevButton = prevButton;
+    this.pdfView = pdfView;
     this.rootLayout = rootLayout;
   }
 
@@ -81,15 +70,9 @@ public final class ActivityPdfViewerBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.controlsLayout;
-      LinearLayout controlsLayout = ViewBindings.findChildViewById(rootView, id);
-      if (controlsLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.nextButton;
-      Button nextButton = ViewBindings.findChildViewById(rootView, id);
-      if (nextButton == null) {
+      id = R.id.pageInfoContainer;
+      MaterialCardView pageInfoContainer = ViewBindings.findChildViewById(rootView, id);
+      if (pageInfoContainer == null) {
         break missingId;
       }
 
@@ -99,22 +82,16 @@ public final class ActivityPdfViewerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.pdfImageView;
-      ImageView pdfImageView = ViewBindings.findChildViewById(rootView, id);
-      if (pdfImageView == null) {
-        break missingId;
-      }
-
-      id = R.id.prevButton;
-      MaterialButton prevButton = ViewBindings.findChildViewById(rootView, id);
-      if (prevButton == null) {
+      id = R.id.pdfView;
+      PDFView pdfView = ViewBindings.findChildViewById(rootView, id);
+      if (pdfView == null) {
         break missingId;
       }
 
       ConstraintLayout rootLayout = (ConstraintLayout) rootView;
 
-      return new ActivityPdfViewerBinding((ConstraintLayout) rootView, controlsLayout, nextButton,
-          pageInfoText, pdfImageView, prevButton, rootLayout);
+      return new ActivityPdfViewerBinding((ConstraintLayout) rootView, pageInfoContainer,
+          pageInfoText, pdfView, rootLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

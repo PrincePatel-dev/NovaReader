@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.pdfpptviewer.app-mergeReleaseResources-33:/values-gu/values-gu.xml",
+            "outputFile": "com.pdfpptviewer.app-mergeReleaseResources-35:/values-gu/values-gu.xml",
             "map": [
                 {
                     "source": "/home/codespace/.gradle/caches/8.14.2/transforms/462775fe98763e9bf7038855c975686b/transformed/material-1.11.0/res/values-gu/values-gu.xml",

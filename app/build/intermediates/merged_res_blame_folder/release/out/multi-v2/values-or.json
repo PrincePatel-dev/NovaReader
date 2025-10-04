@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.pdfpptviewer.app-mergeReleaseResources-33:/values-or/values-or.xml",
+            "outputFile": "com.pdfpptviewer.app-mergeReleaseResources-35:/values-or/values-or.xml",
             "map": [
                 {
                     "source": "/home/codespace/.gradle/caches/8.14.2/transforms/462775fe98763e9bf7038855c975686b/transformed/material-1.11.0/res/values-or/values-or.xml",

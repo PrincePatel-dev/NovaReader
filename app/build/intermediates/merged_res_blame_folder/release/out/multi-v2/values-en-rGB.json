@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.pdfpptviewer.app-mergeReleaseResources-33:/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "com.pdfpptviewer.app-mergeReleaseResources-35:/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "/home/codespace/.gradle/caches/8.14.2/transforms/32f9f672ec92cd493232885ae440b30b/transformed/appcompat-1.6.1/res/values-en-rGB/values-en-rGB.xml",

@@ -9,7 +9,7 @@
 .cxx
 local.properties
 
-*.apk
+# *.apk
 *.ap_
 *.aab
 

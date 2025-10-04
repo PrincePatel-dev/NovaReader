@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.pdfpptviewer.app-mergeReleaseResources-33:/values-km/values-km.xml",
+            "outputFile": "com.pdfpptviewer.app-mergeReleaseResources-35:/values-km/values-km.xml",
             "map": [
                 {
                     "source": "/home/codespace/.gradle/caches/8.14.2/transforms/5666d0775419c95542172af82daaabdb/transformed/core-1.12.0/res/values-km/values-km.xml",

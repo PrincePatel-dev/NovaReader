@@ -18,8 +18,9 @@ id darkModeSwitch
 id nextButton
 id openPdfButton
 id openPptButton
+id pageInfoContainer
 id pageInfoText
-id pdfImageView
+id pdfView
 id prevButton
 id rootLayout
 id settingsCard
