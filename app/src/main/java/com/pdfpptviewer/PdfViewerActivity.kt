@@ -37,7 +37,7 @@ class PdfViewerActivity : AppCompatActivity() {
         pageInfoText = findViewById(R.id.pageInfoText)
         rootLayout = findViewById(R.id.rootLayout)
         
-        applyThemeColors()
+        setTheme(if (isDarkMode()) R.style.Theme_PDFPPTViewer_Dark else R.style.Theme_PDFPPTViewer_Light)
         setupButtons()
         
         intent.data?.let { uri ->
@@ -67,18 +67,22 @@ class PdfViewerActivity : AppCompatActivity() {
             finish()
         }
     }
-    
-    private fun applyThemeColors() {
-        val isDarkMode = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
-        
-        if (isDarkMode) {
-            rootLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_background))
-            pageInfoText.setTextColor(ContextCompat.getColor(this, R.color.dark_text))
-        } else {
-            rootLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.light_background))
-            pageInfoText.setTextColor(ContextCompat.getColor(this, R.color.light_text))
-        }
+
+    private fun isDarkMode(): Boolean {
+        val sharedPref = getSharedPreferences("settings", MODE_PRIVATE)
+        return sharedPref.getBoolean("dark_mode", false)
     }
+
+    override fun onResume() {
+        super.onResume()
+        rootLayout.setBackgroundColor(
+            ContextCompat.getColor(
+                this,
+                if (isDarkMode()) R.color.dark_background else R.color.light_background
+            )
+        )
+    }
+    
     
     private fun setupButtons() {
         prevButton.setOnClickListener {

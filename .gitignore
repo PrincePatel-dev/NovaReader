@@ -12,7 +12,7 @@ local.properties
 *.apk
 *.ap_
 *.aab
-
+replit.md
 *.class
 
 *.log
@@ -22,6 +22,34 @@ captures/
 output.json
 
 *.hprof
+# Sensitive information
+*.env
+.env.*
+secrets.*
+*.key
+*.pem
+*.crt
+*.p12
+*.jks
+*.keystore
+*.pfx
+*.db
+*.sqlite
+*.bak
+*.swp
+*.tmp
+*.cache
+config.json
+config.yaml
+config.yml
+settings.json
+settings.yaml
+settings.yml
+credentials.json
+credentials.yaml
+credentials.yml
 
 /app/release/
 /app/debug/
+BUILDING.md
+show-build-info.sh
